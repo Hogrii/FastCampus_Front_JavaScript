@@ -339,6 +339,7 @@ console.log(!'') // true
 
 console.log(!{}) // false
 console.log(![]) // false
+
 //-----------------------------------------------------------------------------------------
 // 비교(Comparison)
 
@@ -353,3 +354,36 @@ console.log(a > b) // false, 비교 연산자
 console.log(a >= b) // false
 console.log(a < b) // true
 console.log(a <= b) // true
+
+//-----------------------------------------------------------------------------------------
+// 논리(Logical)
+
+const a11 = true
+const b11 = false
+
+// AND 연산자
+if(a11 && b11) {
+    console.log('모두가 참!')
+}
+
+// OR 연산자
+if(a11 || b11) {
+    console.log('하나 이상이 참!')
+}
+
+// AND 연산자
+console.log(true && false) // false
+console.log(1 && 0) // 0
+console.log(1 && 2 && 0) // 0
+console.log(1 && 0 && 2) // 0
+console.log(0 && 1 && 2) // 0
+console.log('A' && 'B' && '') // '' 빈 문자열 출력
+console.log('A' && 'B' && 'C') // C, 모두가 참이면 가장 마지막 참 값이 반환
+
+// OR 연산자
+console.log(false || true) // true
+console.log(0 || 1) // 1
+console.log(false || 0 || {}) // {}
+console.log(false || [] || null) // []
+console.log(function() {} || undefined || '') // function() {}
+console.log(false || 0 || NaN) // NaN
