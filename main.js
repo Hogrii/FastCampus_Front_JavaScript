@@ -186,3 +186,62 @@ const b6 = true
 
 console.log(a6===b6) // false
 console.log(a6==b6) // true
+
+//-----------------------------------------------------------------------------------------
+// 참과 거짓(Truthy & Falsy)
+
+// 거짓 리스트
+// 1) false
+// 2) 0
+// 3) null(명시적)
+// 4) undefined(암시적)
+// 5) NaN
+// 6) ''(빈 문자)
+// 7) 0n
+
+if(true) {
+    console.log('true 참!')
+}
+
+if(false) {
+    console.log('false 거짓!')
+}
+
+if(123) { // Truthy
+    console.log('123 참!')
+}
+
+if(0) {
+    console.log('0 거짓!')
+}
+
+if('0') {
+    console.log('"0" 참!')
+}
+
+if(null) {
+    console.log('null 거짓!')
+}
+
+if(undefined) {
+    console.log('undefined 거짓!')
+}
+
+if(NaN) {
+    console.log('NaN 거짓!')
+}
+
+if('') {
+    console.log('"" 거짓!')
+}
+
+if(0n) {
+    console.log('0n 거짓!')
+}
+
+
+const fruits3 = ['Apple', 'Banana']
+
+if(fruits3.length) { // 아이템의 개수가 0개가 되면 false가 된다
+    console.log('아이템이 들어있음!')
+}
