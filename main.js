@@ -283,3 +283,42 @@ console.log(checkType(null))
 console.log(checkType([]))
 console.log(checkType({}))
 console.log(checkType(function() {}))
+//-----------------------------------------------------------------------------------------
+// 산술, 할당, 증감 연산자
+
+// 산술
+console.log(1 + 2)
+console.log(5 - 7)
+console.log(3 * 4)
+console.log(10 / 2)
+console.log(7 % 5)
+
+function isEven(num) {
+    return num % 2 === 0
+}
+
+console.log(isEven(3)) // false
+console.log(isEven(12)) // true
+
+// 할당
+// const a8 = 3 // const는 재할당이 불가능한 변수
+let a8 = 3
+a8 = a8 + 2 // a8 += 2
+            // a8 -= 2
+            // a8 *= 2
+            // a8 /= 2
+            // a8 %= 2
+
+console.log(a8) // 5
+
+//-----------------------------------------------------------------------------------------
+// 증감 연산자
+
+let a9 = 3 // 변수 a9는 언제든 재할당이 가능하다
+
+console.log(a9++) // 3
+console.log(++a9) // 5
+console.log(a9) // 5
+console.log(a9--) // 5
+console.log(--a9) // 3
+console.log(a9) // 3
