@@ -128,3 +128,40 @@ const users = [userA, userB]
 
 console.log(users[0].name)
 console.log(users[0]['name'])
+
+//-----------------------------------------------------------------------------------------
+// function
+
+function hello() {
+    console.log('Hello!')
+}
+
+hello()
+console.log(hello)
+
+function getNumber() {
+    return 123
+}
+
+console.log(getNumber) 
+console.log(getNumber())// ()를 붙여주어야 함수가 실행된다, ()가 없으면 함수 그 자체가 출력
+console.log(typeof getNumber) // function
+console.log(typeof getNumber()) // number
+
+const getNumber2 = function() { // 익명함수
+    return 123
+}
+
+console.log(typeof getNumber2) // function
+console.log(typeof getNumber2()) // number
+
+const a3 = function() {
+    console.log('A')
+}
+
+const b3 = function(c3) {
+    console.log(c3)
+    c3()
+}
+
+b3(a3)
