@@ -322,3 +322,34 @@ console.log(a9) // 5
 console.log(a9--) // 5
 console.log(--a9) // 3
 console.log(a9) // 3
+
+//-----------------------------------------------------------------------------------------
+// 부정(Negation)
+
+console.log(!true) // false
+console.log(!false) // true
+
+console.log(!0) // true
+console.log(!!0) // false
+console.log(!!!0) // true
+console.log(!null) // true
+console.log(!undefined) // true
+console.log(!NaN) // true
+console.log(!'') // true
+
+console.log(!{}) // false
+console.log(![]) // false
+//-----------------------------------------------------------------------------------------
+// 비교(Comparison)
+
+const a10 = 1
+const b10 = 3
+
+console.log(a == b) // false, 동등 연산자, 형 변환이 된다
+console.log(a != b) // true, 부동 연산자
+console.log(a === b) // false, 일치 연산자
+console.log(a !== b) // true, 불일치 연산자
+console.log(a > b) // false, 비교 연산자
+console.log(a >= b) // false
+console.log(a < b) // true
+console.log(a <= b) // true
