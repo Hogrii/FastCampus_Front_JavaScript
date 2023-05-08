@@ -387,3 +387,45 @@ console.log(false || 0 || {}) // {}
 console.log(false || [] || null) // []
 console.log(function() {} || undefined || '') // function() {}
 console.log(false || 0 || NaN) // NaN
+
+//-----------------------------------------------------------------------------------------
+// Nullish 병합(Nullish Coalescing)
+
+const n = 0;
+
+// OR 연산자를 사용한 경우 -> 거짓이 아닌 참을 찾는다
+const num1 = n || 7
+console.log(num1) // 7
+
+// Nullish 병합 연산자를 사용한 경우 -> null, undefined는 건너뛰고 다른 데이터는 만나자마자 반환
+const num2 = n ?? 7 // n이 0이기 때문(null, undefined가 아니라서)에 바로 반환
+console.log(num2) // 0
+
+
+console.log(null ?? 1) // null을 건너뛰고 1을 만나기 때문에 1을 출력
+console.log(undefined ?? 2) // undefined를 건너뛰고 2를 만나기 때문에 2를 출력
+console.log(null ?? undefined) // undefined가 마지막 데이터이기 때문에 출력
+console.log(null ?? 1 ?? 2) // 1
+console.log(false ?? 1 ?? 2) // false
+console.log(0 ?? 1 ?? 2) // 0
+
+//-----------------------------------------------------------------------------------------
+// 삼항(Ternary)
+
+const a12 = 1
+
+if(a12 < 2) {
+    console.log('참!')
+}else {
+    console.log('거짓!')
+}
+
+console.log(a12 < 2 ? '참!' : '거짓!') // 참!
+
+
+function getAlert(message) {
+    return message ? message : '메시지가 존재하지 않습니다!'
+}
+
+console.log(getAlert('안녕하세요~')) // 참
+console.log(getAlert('')) // 거짓
