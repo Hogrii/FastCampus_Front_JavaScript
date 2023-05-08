@@ -245,3 +245,41 @@ const fruits3 = ['Apple', 'Banana']
 if(fruits3.length) { // 아이템의 개수가 0개가 되면 false가 된다
     console.log('아이템이 들어있음!')
 }
+
+//-----------------------------------------------------------------------------------------
+// 데이터 타입 확인
+
+const a7 = 123
+
+console.log(typeof a7)
+console.log(typeof 'Hello' === 'string')
+console.log(typeof 123 === 'number')
+console.log(typeof false === 'boolean')
+console.log(typeof undefined === 'undefined')
+console.log(typeof null === 'null') // false
+console.log(typeof null === 'object') // true
+console.log(typeof [] === 'object')
+console.log(typeof {} === 'object')
+console.log(typeof function () {} === 'function')
+
+// console.log(null.constructor) // null에서는 constructor가 존재하지 않아서 읽을 수 없다
+console.log([].constructor === Array)
+console.log({}.constructor === Object)
+
+console.log(Object.prototype.toString.call(null).slice(8, -1) === 'Null')
+
+function checkType(data) {
+    return Object.prototype.toString.call(data).slice(8, -1)
+}
+
+console.log(checkType(null))
+console.log(checkType([]))
+console.log(checkType({}))
+console.log(checkType('Hello'))
+console.log(checkType(123))
+console.log(checkType(false))
+console.log(checkType(undefined))
+console.log(checkType(null))
+console.log(checkType([]))
+console.log(checkType({}))
+console.log(checkType(function() {}))
