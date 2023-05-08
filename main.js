@@ -25,8 +25,8 @@ console.log(Number((a+b).toFixed(1)))
 
 //-----------------------------------------------------------------------------------------
 // Boolean
-const a2 = true;
-const b2 = false;
+const a2 = true
+const b2 = false
 
 if(a2) {
     console.log('Hello')
@@ -165,3 +165,24 @@ const b3 = function(c3) {
 }
 
 b3(a3)
+
+//-----------------------------------------------------------------------------------------
+// 형 변환(Type Conversion)
+
+const a4 = 1   // Number
+const b4 = '1' // String
+
+console.log(a4===b4) // false 일치 연산자
+console.log(a4==b4)  // true 동등 연산자 >> 숫자, 문자 데이터이지만 형 변환이 일어나 true가 나오게 된다
+
+const a5 = 0
+const b5 = false
+
+console.log(a5===b5) // false
+console.log(a5==b5) // true
+
+const a6 = 1
+const b6 = true
+
+console.log(a6===b6) // false
+console.log(a6==b6) // true
