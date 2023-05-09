@@ -501,3 +501,33 @@ const obj = {
 const {c18, ...rest2} = obj
 // console.log(a18, b18/*, c18*/) // in.js:500 Uncaught ReferenceError: c18 is not defined
 console.log(c18, rest2)
+//-----------------------------------------------------------------------------------------
+// 선택적 체이닝(Optional Chaining)
+
+const user3 = undefined
+
+// console.log(user3.name) // null, undefined 데이터에는 점 표기법을 사용할 수 없음
+console.log(user3?.name) // null, undefined여도 점 표기법 앞에 ?를 달아주면 오류를 발생시키지 않음
+
+const userA2 = {
+    name: 'JINHO',
+    age: 31,
+    address: {
+        country: 'Korea',
+        city: 'Seoul'
+    }
+}
+
+const userB2 = {
+    name: 'Neo',
+    age: 22
+}
+
+function getCity(user){
+    return user.address?.city || '주소 없음'
+    // 물음표를 달아주어서 오류 발생을 막는다
+    // || 연산자를 사용하면 앞이 null, undefined라면 뒤를 반환한다
+}
+
+console.log(getCity(userA2))
+console.log(getCity(userB2))
