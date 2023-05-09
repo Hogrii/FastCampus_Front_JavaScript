@@ -531,3 +531,98 @@ function getCity(user){
 
 console.log(getCity(userA2))
 console.log(getCity(userB2))
+//-----------------------------------------------------------------------------------------
+// If 조건문
+
+/*
+// 1.
+if(조건) {
+
+}
+
+// 2.
+if(조건) {
+    
+}else{
+
+}
+
+// 3.
+if(조건1){
+
+}else if(조건2){
+
+}else if(조건3){
+
+}else{
+
+}
+ */
+//-----------------------------------------------------------------------------------------
+
+function isPositive(number) {
+    if(number>0) {
+        return '양수'
+    }else if(number<0) {
+        return '음수'
+    }else {
+        return '0'
+    }
+    // return undefined // return의 기본값은 undefined
+}
+
+console.log(isPositive(1))
+console.log(isPositive(10))
+console.log(isPositive(-2))
+console.log(isPositive(0))
+//-----------------------------------------------------------------------------------------
+// Switch 조건문
+
+/*
+switch(조건) {
+    case 값1:
+        break // break가 없으면 다음 조건문으로 넘어가기 때문에 주의!
+    case 값2:
+        break
+    default:
+}
+ */
+//-----------------------------------------------------------------------------------------
+
+function price(fruit) {
+    // let p
+    switch(fruit) {
+        case 'Apple':
+            // p = 1000
+            // break
+            return 1000
+        case 'Banana':
+            // p = 1500
+            // break
+            return 1500
+        case 'Cherry':
+            // p = 2000
+            // break
+            return 2000
+        default:
+            return 0
+    }
+    // return p
+
+    /*
+    if(fruit === 'Apple') {
+        return 1000
+    }else if(fruit === 'Banana') {
+        return 1500
+    }else if(fruit === 'Cherry') {
+        return 2000
+    }else {
+        return 0
+    }
+     */
+}
+
+console.log(price('Apple'))
+console.log(price('Banana'))
+console.log(price('Cherry'))
+console.log(price('Hello'))
