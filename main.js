@@ -429,3 +429,40 @@ function getAlert(message) {
 
 console.log(getAlert('안녕하세요~')) // 참
 console.log(getAlert('')) // 거짓
+
+//-----------------------------------------------------------------------------------------
+// 전개 연산자
+
+const a13 = [1, 2, 3]
+
+console.log(a13) // [1, 2, 3]
+console.log(...a13) // 1 2 3 -> 전개 연산자
+console.log(1, 2, 3)
+
+const b13 = [4, 5, 6]
+
+const c13 = a13.concat(b13)
+console.log(c13)
+
+// const d13 = [a13, b13]
+// console.log(d13)
+
+const d13 = [...a13, ...b13]
+
+const a14 = {x:1, y:2}
+const b14 = {y:3, z:4}
+
+const c14 = Object.assign({}, a, b)
+console.log(c14)
+
+const d14 = {...a14, ...14}
+console.log(d14)
+
+function fn(x, y, z){
+    console.log(x, y, z)
+}
+
+fn(1, 2, 3)
+
+const a15 = [1, 2, 3]
+fn(...a14)
