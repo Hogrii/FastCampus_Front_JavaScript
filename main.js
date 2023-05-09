@@ -624,3 +624,77 @@ console.log(price("Apple"));
 console.log(price("Banana"));
 console.log(price("Cherry"));
 console.log(price("Hello"));
+//-----------------------------------------------------------------------------------------
+// For 반복문
+
+/*
+for (초기화; 조건; 증감) {
+  // 반복 실행할 코드
+}
+ */
+
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+for (let i = 9; i > -1; i--) {
+  if (i % 2 === 0) {
+    continue;
+  }
+  console.log(i);
+}
+//-----------------------------------------------------------------------------------------
+// For of 반복문
+
+const fruits4 = ["Apple", "Banana", "Cherry"];
+
+/*
+for (let i = 0; i < fruits4.length; i++) {
+  console.log(fruits[i]);
+}
+ */
+
+for (const fruit of fruits4) {
+  // 개선된 포문..?
+  console.log(fruit);
+}
+//-----------------------------------------------------------------------------------------
+// For of 반복문
+
+const users2 = [
+  {
+    name: "JINHO",
+    age: 31,
+  },
+  {
+    name: "Neo",
+    age: 22,
+  },
+  {
+    name: "Lewis",
+    age: 34,
+  },
+];
+
+for (let i = 0; i < users2.length; i++) {
+  console.log(users2[i].name);
+}
+
+for (const user of users2) {
+  console.log(user.name);
+}
+//-----------------------------------------------------------------------------------------
+// For in 반복문
+
+const user4 = {
+  name: "Jinho",
+  age: 31,
+  isValid: true,
+  email: "jinho@naver.com",
+};
+
+for (const key in user4) {
+  // 속성(name, age, isValid, email 등)을 출력
+  console.log(key);
+  console.log(user4[key]); // 대괄호 표기법
+}
