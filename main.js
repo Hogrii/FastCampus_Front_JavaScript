@@ -465,4 +465,39 @@ function fn(x, y, z){
 fn(1, 2, 3)
 
 const a15 = [1, 2, 3]
-fn(...a14)
+fn(...a15)
+//-----------------------------------------------------------------------------------------
+// 구조 분해 할당
+
+const arr = [1, 2, 3]
+// const a16 = arr[0]
+// const b16 = arr[1]
+// const c16 = arr[2]
+
+// 구조 분해 할당
+const [a16, b16, c16] = arr // 배열을 배열구조에 할당
+
+console.log(a16, b16, c16)
+
+// const [a17, rest] = arr
+// console.log(a17, rest) // rest에 2번째 값이 들어가고 3번째 값은 사라짐
+
+// 전개 연산자 적용
+const [a17, ...rest] = arr
+console.log(a17, rest) // 1, [2, 3]
+
+// 객체 구조 분해 할당
+const obj = {
+    a18: 1,
+    b18: 2,
+    c18: 3,
+    x: 7,
+    y: 100
+}
+// const a18 = obj.a18
+// const b18 = obj.b18
+// const c18 = obj.c18
+
+const {c18, ...rest2} = obj
+// console.log(a18, b18/*, c18*/) // in.js:500 Uncaught ReferenceError: c18 is not defined
+console.log(c18, rest2)
